@@ -18,7 +18,7 @@ hack_ani = [
 ]
 
 
-@Barath.on_message(
+@barath.on_message(
     filters.command("hack", prefixes=config.HANDLER) & filters.user(config.OWNER_ID)
 )
 async def hack(_, m):
@@ -53,7 +53,7 @@ love_ani = [
 ]
 
 
-@Barath.on_message(
+@barath.on_message(
     filters.command("love", prefixes=config.HANDLER) & filters.user(config.OWNER_ID)
 )
 async def love(_, m):
