@@ -30,7 +30,7 @@ async def hack(_, message):
         msg = await message.reply_text("ʜᴀᴄᴋ ʙᴇᴇɴ sᴛᴀʀᴛᴇᴅ...")
         for x in range(9):
             await msg.edit_text(hack_ani[x % 9])
-            time.sleep(1)
+            time.sleep(10)
             await msg.edit_text(
                 f"**Sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ!**\n[{reply.from_user.first_name}](tg://user?id={reply.from_user.id})"
             )
