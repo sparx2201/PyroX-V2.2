@@ -19,8 +19,7 @@ hack_ani = [
 
 
 @barath.on_message(
-    filters.command("hack", prefixes=config.HANDLER) & filters.user(config.OWNER_ID)
-)
+    filters.command("hack", prefixes=HANDLER) & filters.me)
 async def hack(_, message):
     reply = message.reply_to_message
     if not reply:
@@ -53,9 +52,8 @@ love_ani = [
 ]
 
 
-@barath.on_message(
-    filters.command("love", prefixes=config.HANDLER) & filters.user(config.OWNER_ID)
-)
+@barath.on_message(filters.command("love", prefixes=HANDLER) & filters.me)
+
 async def love(_, message):
     msg = await message.reply_text("💑")
     for x in range(13):
