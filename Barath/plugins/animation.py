@@ -3,6 +3,7 @@ import time
 from pyrogram import filters
 
 import config
+from config import HANDLER, OWNER_ID, BARATH, SOURCE
 from Barath import barath, MODULE
 
 hack_ani = [
