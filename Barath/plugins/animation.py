@@ -21,19 +21,20 @@ hack_ani = [
 
 @barath.on_message(
     filters.command("hack", prefixes=HANDLER) & filters.me)
-async def hack(_, message):
-    reply = message.reply_to_message
+async def hack(_, m):
+    reply = m.reply_to_message
     if not reply:
-        await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ ʜᴀᴄᴋ!")
+        await m.reply_text("ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ ʜᴀᴄᴋ!")
         return
     if reply:
-        msg = await message.reply_text("ʜᴀᴄᴋ ʙᴇᴇɴ sᴛᴀʀᴛᴇᴅ...")
+        msg = await m.reply_text("ʜᴀᴄᴋ ʙᴇᴇɴ sᴛᴀʀᴛᴇᴅ...")
         for x in range(9):
             await msg.edit_text(hack_ani[x % 9])
-            time.sleep(10)
+            time.sleep(1)
             await msg.edit_text(
                 f"**Sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ!**\n[{reply.from_user.first_name}](tg://user?id={reply.from_user.id})"
             )
+
 
 
 love_ani = [
@@ -55,8 +56,8 @@ love_ani = [
 
 @barath.on_message(filters.command("love", prefixes=HANDLER) & filters.me)
 
-async def love(_, message):
-    msg = await message.reply_text("💑")
+async def love(_, m):
+    msg = await m.reply_text("💑")
     for x in range(13):
         await msg.edit_text(love_ani[x % 13])
         time.sleep(1)
