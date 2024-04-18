@@ -33,6 +33,7 @@ async def help_cmds(_, inline_query):
     num_buttons_per_column = (len(buttons) + 1) // 2
     buttons_column1, buttons_column2 = zip_longest(*[iter(buttons)] * num_buttons_per_column, fillvalue=None)
     
+    # Initialize InlineKeyboardMarkup properly
     inline_keyboard = InlineKeyboardMarkup(
         [
             *buttons_column1,
