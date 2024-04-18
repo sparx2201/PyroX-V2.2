@@ -42,6 +42,10 @@ async def help_cmds(_, inline_query):
         ]
     )
 
+    # Ensure inline_keyboard is not None before using it
+    if inline_keyboard is None:
+        inline_keyboard = InlineKeyboardMarkup([])  # Provide an empty InlineKeyboardMarkup as default
+
     await bot.answer_inline_query(
         inline_query.id,
         cache_time=0,
@@ -54,6 +58,7 @@ async def help_cmds(_, inline_query):
             )
         ]
     )
+
 
 @bot.on_inline_query(filters.regex("test"))
 async def test(_, inline_query):
