@@ -109,11 +109,18 @@ async def send_msg(_, m: Message):
     
 
 
-__mod_name__ = "SPAM"  
+__mod_name__ = "SPAM / PM"  
     
 __help__ = """  
 - spam: spam message
 - ds: spam with time
+==========================
+- pmguard: on/off
+- setlimit: msg limit 
+- setpmmsg: default/custom 
+- setblockmsg: default/custom 
+- allow: allow to pm
+- deny: deny to pm
 """  
     
     
