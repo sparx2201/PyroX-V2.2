@@ -22,10 +22,10 @@ async def aexec(code, client, message):
 @bot.on_message(filters.command(["run","eval"],["?","!",".","*","/","$",]))
 async def eval(client, message):
     
-    global OWNER_ID
-    OWNER_ID = [int(oid) for oid in OWNER_ID.split(',')]
-    if message.from_user.id not in OWNER_ID:
-         return
+#    global OWNER_ID
+#    OWNER_ID = [int(oid) for oid in OWNER_ID.split(',')]
+#    if message.from_user.id not in OWNER_ID:
+#         return
     if len(message.text.split()) <2:
           return await message.reply_text("`Input Not Found!`")
     status_message = await message.reply_text("Processing ...")
