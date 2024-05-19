@@ -21,6 +21,8 @@ async def aexec(code, client, message):
 
 @bot.on_message(filters.command(["run","eval"],["?","!",".","*","/","$",]))
 async def eval(client, message):
+    
+    OWNER_ID = [int(oid) for oid in OWNER_ID.split(',')]
     if message.from_user.id not in OWNER_ID:
          return
     if len(message.text.split()) <2:
